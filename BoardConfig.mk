@@ -34,7 +34,7 @@ TARGET_ARCH_VARIANT_FPU := neon
 ARCH_ARM_HAVE_VFP := true
 
 # Kernel
-TARGET_PREBUILT_KERNEL := device/htc/leo/prebuilt/kernel
+# TARGET_PREBUILT_KERNEL := device/htc/leo/prebuilt/kernel
 TARGET_KERNEL_SOURCE := kernel/htc/leo
 TARGET_KERNEL_CONFIG := htcleo_defconfig
 
