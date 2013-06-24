@@ -36,7 +36,7 @@ ARCH_ARM_HAVE_VFP := true
 # Kernel
 TARGET_PREBUILT_KERNEL := device/htc/leo/prebuilt/kernel
 TARGET_KERNEL_SOURCE := kernel/htc/leo
-TARGET_KERNEL_CONFIG := leo_defconfig
+TARGET_KERNEL_CONFIG := htcleo_defconfig
 
 # FPU compilation flags
 TARGET_GLOBAL_CFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp
@@ -59,17 +59,6 @@ COMMON_GLOBAL_CFLAGS    += -DREFRESH_RATE=60
 #WIFI_DRIVER_FW_PATH_P2P     :=
 #WIFI_DRIVER_FW_PATH_PARAM   :=
 #BOARD_LEGACY_NL80211_STA_EVENTS := false
-
-# Wi-Fi Configs
-BOARD_WPA_SUPPLICANT_DRIVER := WEXT
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_wext
-WPA_SUPPLICANT_VERSION      := VER_0_8_X
-BOARD_WLAN_DEVICE           := bcm4329
-WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/bcm4329.ko"
-WIFI_DRIVER_FW_PATH_STA     := "/vendor/firmware/fw_bcm4329.bin"
-WIFI_DRIVER_FW_PATH_AP      := "/vendor/firmware/fw_bcm4329_apsta.bin"
-WIFI_DRIVER_MODULE_ARG      := "iface_name=wlan firmware_path=/vendor/firmware/fw_bcm4329.bin nvram_path=/proc/calibration"
-WIFI_DRIVER_MODULE_NAME     := "bcm4329"
 
 # # cat /proc/mtd
 # dev:    size   erasesize  name
