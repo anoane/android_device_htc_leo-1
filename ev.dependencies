@@ -2,6 +2,7 @@
   {
     "repository": "android_device_htc_qsd8k-common",
     "target_path": "device/htc/qsd8k-common",
-    "branch": "cm-10.1"
+    "branch": "jellybean",
+	"dep_type": "device"
   }
 ]

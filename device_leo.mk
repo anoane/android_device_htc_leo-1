@@ -23,7 +23,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += device/htc/leo/overlay
+DEVICE_PACKAGE_OVERLAYS += device/ev/leo/overlay
 
 # Packages
 PRODUCT_PACKAGES += \
@@ -34,64 +34,64 @@ PRODUCT_PACKAGES += \
 
 # Vold
 PRODUCT_COPY_FILES += \
-	device/htc/leo/vold.fstab:system/etc/vold.fstab
+	device/ev/leo/vold.fstab:system/etc/vold.fstab
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-	device/htc/leo/ramdisk/init.htcleo.rc:root/init.htcleo.rc \
-	device/htc/leo/ramdisk/init.htcleo.usb.rc:root/init.htcleo.usb.rc \
-	device/htc/leo/ramdisk/ueventd.htcleo.rc:root/ueventd.htcleo.rc \
-	device/htc/leo/ramdisk/logo.rle:root/logo.rle \
+	device/ev/leo/ramdisk/init.htcleo.rc:root/init.htcleo.rc \
+	device/ev/leo/ramdisk/init.htcleo.usb.rc:root/init.htcleo.usb.rc \
+	device/ev/leo/ramdisk/ueventd.htcleo.rc:root/ueventd.htcleo.rc \
+	device/ev/leo/ramdisk/logo.rle:root/logo.rle \
 
 # GSM APN list
 PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml \
-    vendor/cm/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml
+    vendor/ev/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml \
+    vendor/ev/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml
 
 # GPS
 PRODUCT_COPY_FILES += \
-     device/htc/leo/configs/gps.conf:system/etc/gps.conf
+     device/ev/leo/configs/gps.conf:system/etc/gps.conf
 
 # Add the postrecoveryboot.sh so that the recovery.fstab can be changed
 PRODUCT_COPY_FILES += \
-    device/htc/leo/scripts/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
+    device/ev/leo/scripts/postrecoveryboot.sh:recovery/root/sbin/postrecoveryboot.sh
 
 # media config xml file
 PRODUCT_COPY_FILES += \
-	device/htc/leo/configs/media_profiles.xml:system/etc/media_profiles.xml
+	device/ev/leo/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # Scripts
 PRODUCT_COPY_FILES += \
-	device/htc/leo/scripts/init.d/01modules:system/etc/init.d/01modules \
-	device/htc/leo/scripts/init.d/02usb_tethering:system/etc/init.d/02usb_tethering \
-	device/htc/leo/scripts/init.d/10mic_level:system/etc/init.d/10mic_level \
+	device/ev/leo/scripts/init.d/01modules:system/etc/init.d/01modules \
+	device/ev/leo/scripts/init.d/02usb_tethering:system/etc/init.d/02usb_tethering \
+	device/ev/leo/scripts/init.d/10mic_level:system/etc/init.d/10mic_level \
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
-	device/htc/leo/keylayout/htcleo-keypad.kl:system/usr/keylayout/htcleo-keypad.kl \
-	device/htc/leo/keylayout/htcleo-keypad.kcm:system/usr/keychars/htcleo-keypad.kcm \
-	device/htc/leo/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
-	device/htc/leo/keylayout/htcleo-touchscreen.idc:system/usr/idc/htcleo-touchscreen.idc
+	device/ev/leo/keylayout/htcleo-keypad.kl:system/usr/keylayout/htcleo-keypad.kl \
+	device/ev/leo/keylayout/htcleo-keypad.kcm:system/usr/keychars/htcleo-keypad.kcm \
+	device/ev/leo/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
+	device/ev/leo/keylayout/htcleo-touchscreen.idc:system/usr/idc/htcleo-touchscreen.idc
 
 # cLK
 PRODUCT_COPY_FILES += \
-	device/htc/leo/clk/default.prop:system/default.prop \
-	device/htc/leo/clk/ppp:system/ppp \
-	device/htc/leo/clk/etc/init.d/97ppp:system/etc/init.d/97ppp \
-	device/htc/leo/clk/etc/ppp/active:system/etc/ppp/active \
-	device/htc/leo/clk/etc/ppp/chap-secrets:system/etc/ppp/chap-secrets \
-	device/htc/leo/clk/etc/ppp/ip-down:system/etc/ppp/ip-down \
-	device/htc/leo/clk/etc/ppp/ip-up:system/etc/ppp/ip-up \
-	device/htc/leo/clk/etc/ppp/options:system/etc/ppp/options \
-	device/htc/leo/clk/etc/ppp/options.smd:system/etc/ppp/options.smd \
-	device/htc/leo/clk/etc/ppp/pap-secrets:system/etc/ppp/pap-secrets \
-	device/htc/leo/clk/etc/ppp/ppp-gprs.pid:system/etc/ppp/ppp-gprs.pid \
-	device/htc/leo/clk/etc/ppp/resolv.conf:system/etc/ppp/resolv.conf
+	device/ev/leo/clk/default.prop:system/default.prop \
+	device/ev/leo/clk/ppp:system/ppp \
+	device/ev/leo/clk/etc/init.d/97ppp:system/etc/init.d/97ppp \
+	device/ev/leo/clk/etc/ppp/active:system/etc/ppp/active \
+	device/ev/leo/clk/etc/ppp/chap-secrets:system/etc/ppp/chap-secrets \
+	device/ev/leo/clk/etc/ppp/ip-down:system/etc/ppp/ip-down \
+	device/ev/leo/clk/etc/ppp/ip-up:system/etc/ppp/ip-up \
+	device/ev/leo/clk/etc/ppp/options:system/etc/ppp/options \
+	device/ev/leo/clk/etc/ppp/options.smd:system/etc/ppp/options.smd \
+	device/ev/leo/clk/etc/ppp/pap-secrets:system/etc/ppp/pap-secrets \
+	device/ev/leo/clk/etc/ppp/ppp-gprs.pid:system/etc/ppp/ppp-gprs.pid \
+	device/ev/leo/clk/etc/ppp/resolv.conf:system/etc/ppp/resolv.conf
 
 # Kernel modules
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 PRODUCT_COPY_FILES += $(shell \
-    find device/htc/leo/modules -name '*.ko' \
+    find device/ev/leo/modules -name '*.ko' \
     | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
     | tr '\n' ' ')
 endif
